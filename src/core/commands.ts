@@ -10,10 +10,12 @@ type Fn = (s: AppState, arg: Arg, ctx: Ctx) => Result | AppState;
 const HISTORY_MAX = 100;
 const toast = (s: AppState, t: string): AppState => ({ ...s, view: { ...s.view, toast: t } });
 /** 문서 데이터를 바꾸는 명령: 되돌리기 기록을 남긴다 */
-function edit(s: AppState, f: (d: Data) => Data, msg = ''): AppState {
+function edit(s: AppState, f: (d: Data) => Data, msg = '', merge?: string): AppState {
   const data = f(s.data);
   if (data === s.data) return s;
-  return { ...s, data, past: [...s.past, s.data].slice(-HISTORY_MAX), future: [], view: { ...s.view, toast: msg } };
+  // 같은 입력칸을 연속 타이핑하면 되돌리기 한 단계로 합친다
+  if (merge && s.lastEdit === merge) return { ...s, data, future: [], lastEdit: merge, view: { ...s.view, toast: msg } };
+  return { ...s, lastEdit: merge, data, past: [...s.past, s.data].slice(-HISTORY_MAX), future: [], view: { ...s.view, toast: msg } };
 }
 const push = (s: AppState, sc: Screen): AppState => ({ ...s, view: { ...s.view, stack: [...s.view.stack, sc], toast: '' } });
 const tab = (t: Tab): Fn => s => ({ ...s, view: { ...s.view, tab: t, stack: [], toast: '' } });
@@ -92,8 +94,8 @@ export const COMMANDS: Record<string, Fn> = {
       { id: `r${oid}`, orderId: oid, storeId: o.storeId, rating: r, text: t.join('|'), at: ctx.now() }] }), '리뷰를 남겼어요');
     return { ...e, view: { ...e.view, stack: e.view.stack.slice(0, -1) } };
   },
-  'address.set': (s, a) => edit(s, d => d.address === String(a ?? '') ? d : { ...d, address: String(a ?? '') }),
-  'request.set': (s, a) => edit(s, d => d.request === String(a ?? '') ? d : { ...d, request: String(a ?? '') }),
+  'address.set': (s, a) => edit(s, d => d.address === String(a ?? '') ? d : { ...d, address: String(a ?? '') }, '', 'address'),
+  'request.set': (s, a) => edit(s, d => d.request === String(a ?? '') ? d : { ...d, request: String(a ?? '') }, '', 'request'),
   'edit.undo': s => {
     if (!s.past.length) return s;
     return { ...s, data: s.past[s.past.length - 1], past: s.past.slice(0, -1), future: [s.data, ...s.future] };
@@ -115,7 +117,9 @@ export const COMMAND_IDS = Object.keys(COMMANDS);
 export function run(s: AppState, id: string, arg?: Arg, ctx: Ctx = { now: Date.now }): Result {
   const f = COMMANDS[id]; if (!f) throw new Error('unknown command ' + id);
   const r = f(s, arg, ctx);
-  return 'state' in r ? r : { state: r };
+  const out = 'state' in r ? r : { state: r };
+  if (id !== 'address.set' && id !== 'request.set' && id !== 'nav.stay' && out.state.lastEdit) out.state = { ...out.state, lastEdit: undefined };
+  return out;
 }
 
 /** 단축키 → 명령. UI 는 이 표만 참조한다. */
