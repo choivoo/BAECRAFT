@@ -1,0 +1,322 @@
+{
+  "format": "hankkikok/1",
+  "address": "서울시 중구 세종대로 110",
+  "request": "",
+  "stores": [
+    {
+      "id": "s1",
+      "name": "든든한상 백반",
+      "category": "한식",
+      "rating": 4.8,
+      "reviewCount": 312,
+      "minOrder": 9000,
+      "deliveryFee": 1500,
+      "etaMin": 25,
+      "emoji": "🍚",
+      "menus": [
+        {
+          "id": "s1m1",
+          "name": "제육볶음 정식",
+          "price": 9500,
+          "desc": "매콤한 제육과 반찬 4종"
+        },
+        {
+          "id": "s1m2",
+          "name": "된장찌개 정식",
+          "price": 8500,
+          "desc": ""
+        },
+        {
+          "id": "s1m3",
+          "name": "계란말이",
+          "price": 5000,
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "name": "홍룡반점",
+      "category": "중식",
+      "rating": 4.5,
+      "reviewCount": 201,
+      "minOrder": 12000,
+      "deliveryFee": 2000,
+      "etaMin": 35,
+      "emoji": "🥢",
+      "menus": [
+        {
+          "id": "s2m1",
+          "name": "짜장면",
+          "price": 7000,
+          "desc": ""
+        },
+        {
+          "id": "s2m2",
+          "name": "짬뽕",
+          "price": 8500,
+          "desc": ""
+        },
+        {
+          "id": "s2m3",
+          "name": "탕수육(소)",
+          "price": 15000,
+          "desc": "바삭한 찹쌀 튀김"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "name": "스시한점",
+      "category": "일식",
+      "rating": 4.7,
+      "reviewCount": 158,
+      "minOrder": 15000,
+      "deliveryFee": 3000,
+      "etaMin": 40,
+      "emoji": "🍣",
+      "menus": [
+        {
+          "id": "s3m1",
+          "name": "모둠초밥 10p",
+          "price": 16000,
+          "desc": ""
+        },
+        {
+          "id": "s3m2",
+          "name": "연어덮밥",
+          "price": 12000,
+          "desc": ""
+        },
+        {
+          "id": "s3m3",
+          "name": "우동",
+          "price": 6500,
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "name": "바삭바삭 치킨",
+      "category": "치킨",
+      "rating": 4.6,
+      "reviewCount": 540,
+      "minOrder": 17000,
+      "deliveryFee": 2500,
+      "etaMin": 45,
+      "emoji": "🍗",
+      "menus": [
+        {
+          "id": "s4m1",
+          "name": "후라이드",
+          "price": 18000,
+          "desc": ""
+        },
+        {
+          "id": "s4m2",
+          "name": "양념치킨",
+          "price": 19000,
+          "desc": ""
+        },
+        {
+          "id": "s4m3",
+          "name": "치즈볼",
+          "price": 5000,
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "name": "화덕피자 모아",
+      "category": "피자",
+      "rating": 4.4,
+      "reviewCount": 97,
+      "minOrder": 16000,
+      "deliveryFee": 2000,
+      "etaMin": 38,
+      "emoji": "🍕",
+      "menus": [
+        {
+          "id": "s5m1",
+          "name": "마르게리타",
+          "price": 14500,
+          "desc": ""
+        },
+        {
+          "id": "s5m2",
+          "name": "페퍼로니",
+          "price": 16500,
+          "desc": ""
+        },
+        {
+          "id": "s5m3",
+          "name": "콜라 1.25L",
+          "price": 2500,
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "name": "떡볶이 놀이터",
+      "category": "분식",
+      "rating": 4.3,
+      "reviewCount": 420,
+      "minOrder": 8000,
+      "deliveryFee": 1000,
+      "etaMin": 20,
+      "emoji": "🌶️",
+      "menus": [
+        {
+          "id": "s6m1",
+          "name": "떡볶이",
+          "price": 5000,
+          "desc": ""
+        },
+        {
+          "id": "s6m2",
+          "name": "순대",
+          "price": 4500,
+          "desc": ""
+        },
+        {
+          "id": "s6m3",
+          "name": "김말이 튀김",
+          "price": 3500,
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "name": "달콤 카페",
+      "category": "카페",
+      "rating": 4.9,
+      "reviewCount": 75,
+      "minOrder": 7000,
+      "deliveryFee": 1500,
+      "etaMin": 15,
+      "emoji": "☕",
+      "menus": [
+        {
+          "id": "s7m1",
+          "name": "아메리카노",
+          "price": 3500,
+          "desc": ""
+        },
+        {
+          "id": "s7m2",
+          "name": "카페라떼",
+          "price": 4200,
+          "desc": ""
+        },
+        {
+          "id": "s7m3",
+          "name": "치즈케이크",
+          "price": 5800,
+          "desc": ""
+        }
+      ]
+    }
+  ],
+  "cart": {
+    "storeId": null,
+    "lines": []
+  },
+  "orders": [
+    {
+      "id": "o1",
+      "storeId": "s1",
+      "storeName": "든든한상 백반",
+      "lines": [
+        {
+          "menuId": "s1m1",
+          "name": "제육볶음 정식",
+          "price": 9500,
+          "qty": 2
+        }
+      ],
+      "itemsTotal": 19000,
+      "fee": 1500,
+      "total": 20500,
+      "status": "완료",
+      "placedAt": 1767236460000,
+      "address": "서울시 중구 세종대로 110",
+      "request": ""
+    },
+    {
+      "id": "o2",
+      "storeId": "s4",
+      "storeName": "바삭바삭 치킨",
+      "lines": [
+        {
+          "menuId": "s4m1",
+          "name": "후라이드",
+          "price": 18000,
+          "qty": 1
+        }
+      ],
+      "itemsTotal": 18000,
+      "fee": 2500,
+      "total": 20500,
+      "status": "조리중",
+      "placedAt": 1767236580000,
+      "address": "서울시 중구 세종대로 110",
+      "request": ""
+    },
+    {
+      "id": "o3",
+      "storeId": "s6",
+      "storeName": "떡볶이 놀이터",
+      "lines": [
+        {
+          "menuId": "s6m1",
+          "name": "떡볶이",
+          "price": 5000,
+          "qty": 1
+        },
+        {
+          "menuId": "s6m2",
+          "name": "순대",
+          "price": 4500,
+          "qty": 1
+        }
+      ],
+      "itemsTotal": 9500,
+      "fee": 1000,
+      "total": 10500,
+      "status": "취소",
+      "placedAt": 1767236640000,
+      "address": "서울시 중구 세종대로 110",
+      "request": ""
+    }
+  ],
+  "favorites": [
+    "s1",
+    "s7"
+  ],
+  "reviews": [
+    {
+      "id": "ro1",
+      "orderId": "o1",
+      "storeId": "s1",
+      "rating": 5,
+      "text": "맛있어요",
+      "at": 1767236520000
+    }
+  ],
+  "x_custom": {
+    "memo": "보존돼야 함",
+    "n": [
+      1,
+      2,
+      {
+        "k": "한글"
+      }
+    ],
+    "flag": true
+  },
+  "x_other": null
+}

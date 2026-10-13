@@ -1,0 +1,19 @@
+.s2-list{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}
+.s2-h{font-size:16px;margin:16px 0 8px}
+.s2-card{width:100%;min-height:44px;text-align:left;border:1px solid #e5e7eb;background:#fff;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:4px;overflow-wrap:anywhere}
+.s2-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.s2-mu{color:var(--mu);font-size:13px}
+.s2-badge{display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;background:#e5e7eb;white-space:nowrap}
+.s2-badge.on{background:var(--c);color:#fff}.s2-badge.x{background:#fecaca}
+.s2-empty{text-align:center;color:var(--mu);padding:40px 12px}
+.s2-btn{min-height:44px;min-width:44px;padding:0 14px;border:1px solid #d1d5db;background:#fff;border-radius:10px}
+.s2-btn.pri{background:var(--c);border-color:var(--c);color:#fff}
+.s2-btn.danger{color:#b91c1c;border-color:#fca5a5}
+.s2-btn:disabled{opacity:.45;cursor:default}
+.s2-btns{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.s2-prog{display:flex;gap:4px;margin:12px 0;padding:0;list-style:none}
+.s2-prog li{flex:1;text-align:center;font-size:12px;padding:8px 0;border-radius:8px;background:#e5e7eb;color:var(--mu)}
+.s2-prog li.on{background:var(--c);color:#fff;font-weight:700}
+.s2-input{width:100%;min-height:44px;padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;font:inherit}
+.s2-stars{display:flex;gap:4px}.s2-stars button{font-size:26px;border:0;background:none;min-width:44px;min-height:44px}
+textarea.s2-input{min-height:120px;resize:vertical}
